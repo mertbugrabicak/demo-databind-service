@@ -1,0 +1,271 @@
+{
+  "vulnerabilities": [
+    {
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "alternativeIds": [],
+      "creationTime": "2021-12-26T12:13:09.437997Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 5.9,
+      "description": "## Overview\n[com.fasterxml.jackson.core:jackson-databind](https://github.com/FasterXML/jackson-databind) is a library which contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor.\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) when using JDK serialization to serialize and deserialize `JsonNode` values.\r\nIt is possible for the attacker to send a 4-byte length payload, with a value of `Integer.MAX_VALUE` , that will eventually cause large buffer allocation and out of heap memory.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `com.fasterxml.jackson.core:jackson-databind` to version 2.13.1, 2.12.6 or higher.\n## References\n- [GitHub Commit](https://github.com/FasterXML/jackson-databind/commit/3ccde7d938fea547e598fdefe9a82cff37fed5cb)\n- [GitHub Issue](https://github.com/FasterXML/jackson-databind/issues/3328)\n",
+      "disclosureTime": "2021-12-25T19:19:59Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.13.1",
+        "2.12.6"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2326698",
+      "identifiers": {
+        "CVE": [],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "language": "java",
+      "malicious": false,
+      "mavenModuleName": {
+        "artifactId": "jackson-databind",
+        "groupId": "com.fasterxml.jackson.core"
+      },
+      "modificationTime": "2021-12-31T11:38:58.447854Z",
+      "moduleName": "com.fasterxml.jackson.core:jackson-databind",
+      "packageManager": "maven",
+      "packageName": "com.fasterxml.jackson.core:jackson-databind",
+      "patches": [],
+      "proprietary": false,
+      "publicationTime": "2021-12-26T15:34:31Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/FasterXML/jackson-databind/commit/3ccde7d938fea547e598fdefe9a82cff37fed5cb"
+        },
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/FasterXML/jackson-databind/issues/3328"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[2.13.0,2.13.1)",
+          "[2.10.0.pr1,2.12.6)"
+        ]
+      },
+      "severity": "medium",
+      "socialTrendAlert": false,
+      "title": "Denial of Service (DoS)",
+      "severityWithCritical": "medium",
+      "from": [
+        "com.mertbugrabicak:demo-databind-service@0.0.1-SNAPSHOT",
+        "com.fasterxml.jackson.core:jackson-databind@2.13.0"
+      ],
+      "upgradePath": [
+        false,
+        "com.fasterxml.jackson.core:jackson-databind@2.13.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.13.0"
+    },
+    {
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "alternativeIds": [],
+      "creationTime": "2022-03-11T13:26:43.073121Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 7.5,
+      "description": "## Overview\n[com.fasterxml.jackson.core:jackson-databind](https://github.com/FasterXML/jackson-databind) is a library which contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor.\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) via a large depth of nested objects.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `com.fasterxml.jackson.core:jackson-databind` to version 2.12.6.1, 2.13.2.1 or higher.\n## References\n- [GitHub Commit](https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b)\n- [GitHub Issue](https://github.com/FasterXML/jackson-databind/issues/2816)\n- [GitHub PR](https://github.com/FasterXML/jackson-databind/pull/3416)\n",
+      "disclosureTime": "2022-03-11T13:18:25Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.12.6.1",
+        "2.13.2.1"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2421244",
+      "identifiers": {
+        "CVE": [
+          "CVE-2020-36518"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "language": "java",
+      "malicious": false,
+      "mavenModuleName": {
+        "artifactId": "jackson-databind",
+        "groupId": "com.fasterxml.jackson.core"
+      },
+      "modificationTime": "2022-04-01T09:33:51.425400Z",
+      "moduleName": "com.fasterxml.jackson.core:jackson-databind",
+      "packageManager": "maven",
+      "packageName": "com.fasterxml.jackson.core:jackson-databind",
+      "patches": [],
+      "proprietary": false,
+      "publicationTime": "2022-03-11T14:24:04Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b"
+        },
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/FasterXML/jackson-databind/issues/2816"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/FasterXML/jackson-databind/pull/3416"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[, 2.12.6.1)",
+          "[2.13.0, 2.13.2.1)"
+        ]
+      },
+      "severity": "high",
+      "socialTrendAlert": false,
+      "title": "Denial of Service (DoS)",
+      "severityWithCritical": "high",
+      "from": [
+        "com.mertbugrabicak:demo-databind-service@0.0.1-SNAPSHOT",
+        "com.fasterxml.jackson.core:jackson-databind@2.13.0"
+      ],
+      "upgradePath": [
+        false,
+        "com.fasterxml.jackson.core:jackson-databind@2.13.2.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "com.fasterxml.jackson.core:jackson-databind",
+      "version": "2.13.0"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 29,
+  "org": "mbicak",
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.22.1\nignore: {}\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": {
+    "severities": {},
+    "orgLicenseRules": {
+      "AGPL-1.0": {
+        "licenseType": "AGPL-1.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "AGPL-3.0": {
+        "licenseType": "AGPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "Artistic-1.0": {
+        "licenseType": "Artistic-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "Artistic-2.0": {
+        "licenseType": "Artistic-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CDDL-1.0": {
+        "licenseType": "CDDL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CPOL-1.02": {
+        "licenseType": "CPOL-1.02",
+        "severity": "high",
+        "instructions": ""
+      },
+      "EPL-1.0": {
+        "licenseType": "EPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "GPL-2.0": {
+        "licenseType": "GPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "GPL-3.0": {
+        "licenseType": "GPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "LGPL-2.0": {
+        "licenseType": "LGPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.1": {
+        "licenseType": "LGPL-2.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0": {
+        "licenseType": "LGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-1.1": {
+        "licenseType": "MPL-1.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-2.0": {
+        "licenseType": "MPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MS-RL": {
+        "licenseType": "MS-RL",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "SimPL-2.0": {
+        "licenseType": "SimPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      }
+    }
+  },
+  "packageManager": "maven",
+  "ignoreSettings": null,
+  "summary": "2 vulnerable dependency paths",
+  "remediation": {
+    "unresolved": [],
+    "upgrade": {
+      "com.fasterxml.jackson.core:jackson-databind@2.13.0": {
+        "upgradeTo": "com.fasterxml.jackson.core:jackson-databind@2.13.2.1",
+        "upgrades": [
+          "com.fasterxml.jackson.core:jackson-databind@2.13.0",
+          "com.fasterxml.jackson.core:jackson-databind@2.13.0"
+        ],
+        "vulns": [
+          "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2421244",
+          "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2326698"
+        ]
+      }
+    },
+    "patch": {},
+    "ignore": {},
+    "pin": {}
+  },
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 2,
+  "projectName": "com.mertbugrabicak:demo-databind-service",
+  "displayTargetFile": "pom.xml",
+  "path": "/sources"
+}
