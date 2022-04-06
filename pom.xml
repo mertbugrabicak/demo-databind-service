@@ -12,14 +12,14 @@
 	<artifactId>demo-databind-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo-databind-service</name>
-	<description>Test project</description>
+	<description>Demo Project for testing</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -27,6 +27,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.13.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
